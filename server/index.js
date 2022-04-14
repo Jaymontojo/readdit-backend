@@ -1,9 +1,11 @@
 const express = require('express');
+const db = require('../database/knex');
 const PORT = process.env.PORT || 3000;
 const app = express();
 
 (async () => {
   try{
+    await db.migrate.latest();
     app.get("/hello", (req, res)=> {
       res.send("world")
         .status(200);
