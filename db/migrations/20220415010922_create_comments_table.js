@@ -1,20 +1,19 @@
 exports.up = async function(knex) {
-  await knex.schema.createTable('posts', (table) => {
+  await knex.schema.createTable('comments', (table) => {
     table.increments('id');
-    table.string('title', 255)
+    table.text('contents', 'mediumtext')
       .notNullable;
-    table.text('contents', 'mediumtext');
     table.integer('user_id')
       .unsigned();
     table.foreign('user_id')
       .references('id')
       .inTable('users')
       .onDelete('SET NULL');
-    table.integer('subreaddit_id')
+    table.integer('post_id')
       .unsigned();
-    table.foreign('subreaddit_id')
+    table.foreign('post_id')
       .references('id')
-      .inTable('subreaddits')
+      .inTable('posts')
       .onDelete('CASCADE');
     table.timestamps(false, true);
   });
@@ -22,7 +21,7 @@ exports.up = async function(knex) {
   await knex.raw(`
   CREATE TRIGGER update_timestamp
   BEFORE UPDATE
-  ON posts
+  ON comments
   FOR EACH ROW
   EXECUTE PROCEDURE update_timestamp();
 `);
@@ -30,5 +29,5 @@ exports.up = async function(knex) {
 
 exports.down = async function(knex) {
 return await knex.schema
-  .dropTable('posts');
+  .dropTable('comments');
 };
