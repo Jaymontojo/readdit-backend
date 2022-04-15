@@ -1,4 +1,4 @@
-const db = require('../database/knex');
+const db = require('../db/knex');
 const PORT = process.env.PORT || 3000;
 const { setupServer } = require('./server');
 const app = setupServer();
