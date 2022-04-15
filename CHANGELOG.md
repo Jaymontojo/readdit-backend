@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Jaymontojo/readdit-backend/compare/v1.1.0...v1.2.0) (2022-04-15)
+
+
+### Features
+
+* add comments table ([bba52ed](https://github.com/Jaymontojo/readdit-backend/commit/bba52ed2e1fc953809e3bd984f259150e90abbe6))
+* add genres table ([374c841](https://github.com/Jaymontojo/readdit-backend/commit/374c8413e5282050edd98785d650281af07c0443))
+* add knex timestamp function ([7647ea9](https://github.com/Jaymontojo/readdit-backend/commit/7647ea994b6bde6d424cddf3832b51d9fb498949))
+* add posts table ([59309ec](https://github.com/Jaymontojo/readdit-backend/commit/59309ec8c5c11a07e2167e9aeeeb57da04bdd32f))
+* add subreaddits table ([2064cb2](https://github.com/Jaymontojo/readdit-backend/commit/2064cb2079409b8f15680ddb651ab18fec211f36))
+* add users table ([147949c](https://github.com/Jaymontojo/readdit-backend/commit/147949c1a3030702b72798c0f4ce49dab68986f5))
+
 ## 1.1.0 (2022-04-14)
 
 

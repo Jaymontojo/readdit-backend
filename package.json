@@ -1,6 +1,6 @@
 {
   "name": "readdit-backend",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "reddit clone for fun",
   "main": "index.js",
   "scripts": {
