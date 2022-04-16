@@ -12,7 +12,8 @@ const setupServer = () => {
   // });
 
   app.get("/api/users", async (req, res)=> {
-    res.send("world")
+    const users = await User.findMany();
+    res.send(users)
       .status(200);
   });
 

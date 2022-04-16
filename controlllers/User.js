@@ -4,7 +4,13 @@ class User {
   };
 
   async findMany() {
-    
+    try {
+      return await this.db('users')
+        .select('name')
+        .timeout(1500);
+    } catch(err) {
+      return err
+    };
   };
 
   async findOne() {
@@ -22,7 +28,7 @@ class User {
       return "Successfully created"
     } catch(err) {
       return err;
-    }
+    };
   };
 
   async update() {
