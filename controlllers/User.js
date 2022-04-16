@@ -21,14 +21,14 @@ class User {
         .timeout(1500);
     } catch(err) {
       return err;
-    }
+    };
   };
 
-  async create(username, password) {
+  async create(name, password) {
     try {
       await this.db('users')
         .insert({
-          name: username,
+          name: name,
           password: password
         })
         .timeout(1500);
@@ -38,8 +38,16 @@ class User {
     };
   };
 
-  async update() {
-    
+  async update(name, edits) {
+    try {
+      await this.db('users')
+      .where("name", name)
+      .update(edits)
+      .timeout(1500);
+      return 'Successfully Updated!'
+    } catch(err) {
+      return err;
+    };
   };
 
   async delete() {

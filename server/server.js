@@ -11,27 +11,29 @@ const setupServer = () => {
   //     .status(200);
   // });
 
-  app.get("/api/users", async (req, res)=> {
+  app.get('/api/users', async (req, res)=> {
     const users = await User.findMany();
     res.send(users)
       .status(200);
   });
 
-  app.get("/api/users/:name", async (req, res)=> {
+  app.get('/api/users/:name', async (req, res)=> {
     const {name} = req.params;
     const user = await User.findOne(name);
-    res.send(user[0]).
-      status(200);
-    // const users = await User.findOne();
-    // res.send(users)
-    //   .status(200);
+    res.send(user[0]).status(200);
   });
 
-  app.post("/api/users", (req, res) => {
+  app.post('/api/users', (req, res) => {
     const {username, password} = req.body;
     User.create(username, password);
-    res.status(201)
-    res.end();
+    res.status(201).end();
+  });
+
+  app.patch('/api/users/:name', (req, res) => {
+    const { name } = req.params
+    const edits = req.body;
+    User.update(name, edits);
+    res.status(204).end();
   });
 
   return app;
