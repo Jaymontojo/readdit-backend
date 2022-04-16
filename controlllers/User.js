@@ -6,13 +6,23 @@ class User {
   async findMany() {
     
   };
-  
+
   async findOne() {
     
   };
 
-  async create() {
-    
+  async create(username, password) {
+    try {
+      await this.db('users')
+        .insert({
+          name: username,
+          password: password
+        })
+        .timeout(1500);
+      return "Successfully created"
+    } catch(err) {
+      return err;
+    }
   };
 
   async update() {
@@ -22,5 +32,6 @@ class User {
   async delete() {
     
   };
- 
-}
+};
+
+module.exports = new User();
