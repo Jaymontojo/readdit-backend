@@ -17,6 +17,16 @@ const setupServer = () => {
       .status(200);
   });
 
+  app.get("/api/users/:name", async (req, res)=> {
+    const {name} = req.params;
+    const user = await User.findOne(name);
+    res.send(user[0]).
+      status(200);
+    // const users = await User.findOne();
+    // res.send(users)
+    //   .status(200);
+  });
+
   app.post("/api/users", (req, res) => {
     const {username, password} = req.body;
     User.create(username, password);

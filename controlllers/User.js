@@ -9,12 +9,19 @@ class User {
         .select('name')
         .timeout(1500);
     } catch(err) {
-      return err
+      return err;
     };
   };
 
-  async findOne() {
-    
+  async findOne(name) {
+    try {
+      return await this.db('users')
+        .select('name')
+        .where('name', name)
+        .timeout(1500);
+    } catch(err) {
+      return err;
+    }
   };
 
   async create(username, password) {
