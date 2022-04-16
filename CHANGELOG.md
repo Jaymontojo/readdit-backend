@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/Jaymontojo/readdit-backend/compare/v1.2.0...v1.3.0) (2022-04-16)
+
+
+### Features
+
+* add basic user creation ([8ed27ed](https://github.com/Jaymontojo/readdit-backend/commit/8ed27ed2279056a14166a591e2c8ddd852a35cf5))
+* add many users retrieval ([9dedfbc](https://github.com/Jaymontojo/readdit-backend/commit/9dedfbc00b7018627bfdef980d01b97d1a9cbaad))
+* add single user retrieve ([6683c67](https://github.com/Jaymontojo/readdit-backend/commit/6683c67835ce015bc7cf843c686669ca88ebcfe3))
+* add single user update ([9f26369](https://github.com/Jaymontojo/readdit-backend/commit/9f26369c47219e48ad6c24ef73ae4dd63a236701))
+* add user delete ([8d36e53](https://github.com/Jaymontojo/readdit-backend/commit/8d36e53f2c94c56f8deea88966a2a4b7069f8a4f))
+
 ## [1.2.0](https://github.com/Jaymontojo/readdit-backend/compare/v1.1.0...v1.2.0) (2022-04-15)
 
 
