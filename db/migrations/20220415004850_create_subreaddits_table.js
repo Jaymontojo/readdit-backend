@@ -1,7 +1,9 @@
 exports.up = async function(knex) {
   await knex.schema.createTable('subreaddits', (table) => {
     table.increments('id');
-    table.string('name', 255).notNullable;
+    table.string('name', 255)
+      .unique()
+      .notNullable();
     table.integer('genre_id')
       .unsigned();
     table.foreign('genre_id')

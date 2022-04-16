@@ -1,7 +1,9 @@
 exports.up = async function(knex) {
   await knex.schema.createTable('genres', (table) => {
     table.increments('id');
-    table.string('name', 255).notNullable;
+    table.string('name', 255)
+      .unique()
+      .notNullable();
     table.timestamps(false, true);
   });
 

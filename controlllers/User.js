@@ -6,7 +6,7 @@ class User {
   async findMany() {
     try {
       return await this.db('users')
-        .select('name')
+        .select(['name', 'created_at', 'updated_at'])
         .timeout(1500);
     } catch(err) {
       return err;
@@ -16,7 +16,7 @@ class User {
   async findOne(name) {
     try {
       return await this.db('users')
-        .select('name')
+        .select(['name', 'created_at', 'updated_at'])
         .where('name', name)
         .timeout(1500);
     } catch(err) {
@@ -50,8 +50,16 @@ class User {
     };
   };
 
-  async delete() {
-    
+  async delete(name) {
+    try {
+      await this.db('users')
+        .where('name', name)
+        .del()
+        .timeout(1500);
+        return 'Successfully Deleted!';
+    } catch(err) {
+      return err;
+    };
   };
 };
 

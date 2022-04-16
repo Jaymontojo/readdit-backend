@@ -2,7 +2,7 @@ exports.up = async function(knex) {
   await knex.schema.createTable('comments', (table) => {
     table.increments('id');
     table.text('contents', 'mediumtext')
-      .notNullable;
+      .notNullable();
     table.integer('user_id')
       .unsigned();
     table.foreign('user_id')

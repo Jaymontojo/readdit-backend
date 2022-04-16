@@ -30,9 +30,15 @@ const setupServer = () => {
   });
 
   app.patch('/api/users/:name', (req, res) => {
-    const { name } = req.params
+    const { name } = req.params;
     const edits = req.body;
     User.update(name, edits);
+    res.status(204).end();
+  });
+
+  app.delete('/api/users/:name', (req, res) => {
+    const { name } = req.params;
+    User.delete(name);
     res.status(204).end();
   });
 
