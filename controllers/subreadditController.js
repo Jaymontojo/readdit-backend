@@ -6,10 +6,14 @@ router.get('/', async (req, res)=> {
   const subreaddits = await Subreaddit.findMany();
   res.send(subreaddits)
     .status(200);
+
+  //should be able to handle filters by maybe popularity / genre or limits
 });
 
-router.get('/:name', async (req, res)=> {
-  //WIP
+router.get('/r/:name', async (req, res)=> {
+  const { name } = req.params;
+  const subreaddits = await Subreaddit.findOne(name);
+  res.send(subreaddits[0]).status(200);
 });
 
 router.post('/', (req, res) => {
