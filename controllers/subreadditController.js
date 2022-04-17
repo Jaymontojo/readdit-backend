@@ -13,7 +13,11 @@ router.get('/:name', async (req, res)=> {
 });
 
 router.post('/', (req, res) => {
-  //WIP
+  const { name, genre_id } = req.body;
+  Subreaddit.create(name, genre_id);
+  res.status(201).end();
+
+  //should check if that genre ID exists in the database?
 });
 
 router.patch('/:name', (req, res) => {

@@ -17,8 +17,18 @@ class Subreaddit {
     //WIP
   };
 
-  async create(name) {
-    //WIP
+  async create(name, genre_id) {
+    try {
+      await this.db('subreaddits')
+        .insert({
+          name: name,
+          genre_id: genre_id
+        })
+        .timeout(1500);
+      return "Successfully created"
+    } catch(err) {
+      return err;
+    };
   };
 
   async update(name, edits) {
