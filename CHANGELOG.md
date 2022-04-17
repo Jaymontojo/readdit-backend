@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/Jaymontojo/readdit-backend/compare/v1.3.0...v1.4.0) (2022-04-17)
+
+
+### Features
+
+* add genre delete route ([1ee1ea0](https://github.com/Jaymontojo/readdit-backend/commit/1ee1ea007bf18d96c2fe119ed4ba13553f3ba24e))
+* add genre find many  route ([5caca4d](https://github.com/Jaymontojo/readdit-backend/commit/5caca4d7457d54c1f6d373c44bd4175e23fc08fa))
+* add genre find one route ([344fc48](https://github.com/Jaymontojo/readdit-backend/commit/344fc48ec44c1e366c973f6c1afee2a9b8e10c73))
+* add genre patch route ([5605246](https://github.com/Jaymontojo/readdit-backend/commit/5605246351b0d0a5dbf55186850977c603570795))
+* add genre post route ([ad38f5b](https://github.com/Jaymontojo/readdit-backend/commit/ad38f5b32a84ed4677d9d07d18455cea8bd5199d))
+* add userController for user routes ([b6680e4](https://github.com/Jaymontojo/readdit-backend/commit/b6680e46ce1d495f8dcd1001b4f6c4ddfbc4437c))
+
 ## [1.3.0](https://github.com/Jaymontojo/readdit-backend/compare/v1.2.0...v1.3.0) (2022-04-16)
 
 
