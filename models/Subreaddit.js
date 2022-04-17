@@ -51,7 +51,15 @@ class Subreaddit {
   };
 
   async delete(name) {
-    //WIP
+    try {
+      await this.db('subreaddits')
+        .where('name', name)
+        .del()
+        .timeout(1500);
+        return 'Successfully Deleted!';
+    } catch(err) {
+      return err;
+    };
   };
 };
 

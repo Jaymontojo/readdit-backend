@@ -10,7 +10,7 @@ router.get('/', async (req, res)=> {
   //should be able to handle filters by maybe popularity / genre or limits
 });
 
-router.get('/r/:name', async (req, res)=> {
+router.get('/:name', async (req, res)=> {
   const { name } = req.params;
   const subreaddits = await Subreaddit.findOne(name);
   res.send(subreaddits[0]).status(200);
@@ -24,7 +24,7 @@ router.post('/', (req, res) => {
   //should check if that genre ID exists in the database?
 });
 
-router.patch('/r/:name', async (req, res) => {
+router.patch('/:name', async (req, res) => {
   const { name } = req.params;
   const edits = req.body;
   await Subreaddit.update(name, edits);
@@ -32,7 +32,9 @@ router.patch('/r/:name', async (req, res) => {
 });
 
 router.delete('/:name', (req, res) => {
-  //WIP
+  const { name } = req.params;
+  Subreaddit.delete(name);
+  res.status(204).end();
 });
 
 module.exports = router;

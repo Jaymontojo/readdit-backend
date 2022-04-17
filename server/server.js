@@ -9,7 +9,7 @@ const setupServer = () => {
 
   app.use('/api/users', userController);
   app.use('/api/genres', genreController);
-  app.use('/api/subreaddits', subreadditController);
+  app.use('/api/r', subreadditController);
 
   return app;
 };
