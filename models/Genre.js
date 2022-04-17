@@ -14,7 +14,14 @@ class Genre {
   };
 
   async findOne(name) {
-    //WIP
+    try {
+      return await this.db('genres')
+        .select(['name', 'created_at', 'updated_at'])
+        .where('name', name)
+        .timeout(1500);
+    } catch(err) {
+      return err;
+    };
   };
 
   async create(name) {

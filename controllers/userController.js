@@ -9,9 +9,9 @@ router.get('/', async (req, res)=> {
 });
 
 router.get('/:name', async (req, res)=> {
-  const {name} = req.params;
-  const user = await User.findOne(name);
-  res.send(user[0]).status(200);
+  const { name } = req.params;
+  const users = await User.findOne(name);
+  res.send(users[0]).status(200);
 });
 
 router.post('/', (req, res) => {

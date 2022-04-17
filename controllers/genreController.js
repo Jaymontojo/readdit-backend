@@ -9,7 +9,9 @@ router.get('/', async (req, res)=> {
 });
 
 router.get('/:name', async (req, res)=> {
-  //WIP
+  const { name } = req.params;
+  const genres = await Genre.findOne(name);
+  res.send(genres[0]).status(200);
 });
 
 router.post('/', (req, res) => {
