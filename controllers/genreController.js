@@ -28,7 +28,9 @@ router.patch('/:name', (req, res) => {
 });
 
 router.delete('/:name', (req, res) => {
-  //WIP
+  const { name } = req.params;
+  Genre.delete(name);
+  res.status(204).end();
 });
 
 module.exports = router;

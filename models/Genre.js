@@ -48,7 +48,15 @@ class Genre {
   };
 
   async delete(name) {
-    //WIP
+    try {
+      await this.db('genres')
+        .where('name', name)
+        .del()
+        .timeout(1500);
+        return 'Successfully Deleted!';
+    } catch(err) {
+      return err;
+    };
   };
 };
 
