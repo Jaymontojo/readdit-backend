@@ -3,7 +3,9 @@ const router = express.Router();
 const Genre = require('../models/Genre');
 
 router.get('/', async (req, res)=> {
-  //WIP
+  const genres = await Genre.findMany();
+  res.send(genres)
+    .status(200);
 });
 
 router.get('/:name', async (req, res)=> {
