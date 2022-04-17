@@ -41,9 +41,9 @@ class User {
   async update(name, edits) {
     try {
       await this.db('users')
-      .where("name", name)
-      .update(edits)
-      .timeout(1500);
+        .where("name", name)
+        .update(edits)
+        .timeout(1500);
       return 'Successfully Updated!'
     } catch(err) {
       return err;

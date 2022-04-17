@@ -36,7 +36,15 @@ class Genre {
   };
 
   async update(name, edits) {
-    //WIP
+    try {
+      await this.db('genres')
+        .where("name", name)
+        .update(edits)
+        .timeout(1500);
+      return 'Successfully Updated!'
+    } catch(err) {
+      return err;
+    };
   };
 
   async delete(name) {

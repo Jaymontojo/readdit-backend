@@ -21,7 +21,10 @@ router.post('/', (req, res) => {
 });
 
 router.patch('/:name', (req, res) => {
-  //WIP
+  const { name } = req.params;
+  const edits = req.body;
+  Genre.update(name, edits);
+  res.status(204).end();
 });
 
 router.delete('/:name', (req, res) => {
