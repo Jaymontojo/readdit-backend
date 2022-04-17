@@ -16,9 +16,9 @@ router.get('/:name', async (req, res)=> {
   res.send(subreaddits[0]).status(200);
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   const { name, genre_id } = req.body;
-  Subreaddit.create(name, genre_id);
+  await Subreaddit.create(name, genre_id);
   res.status(201).end();
 
   //should check if that genre ID exists in the database?
@@ -31,9 +31,9 @@ router.patch('/:name', async (req, res) => {
   res.status(204).end();
 });
 
-router.delete('/:name', (req, res) => {
+router.delete('/:name', async (req, res) => {
   const { name } = req.params;
-  Subreaddit.delete(name);
+  await Subreaddit.delete(name);
   res.status(204).end();
 });
 

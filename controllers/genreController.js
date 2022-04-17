@@ -14,22 +14,22 @@ router.get('/:name', async (req, res)=> {
   res.send(genres[0]).status(200);
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   const { name } = req.body;
-  Genre.create(name);
+  await Genre.create(name);
   res.status(201).end();
 });
 
-router.patch('/:name', (req, res) => {
+router.patch('/:name', async (req, res) => {
   const { name } = req.params;
   const edits = req.body;
-  Genre.update(name, edits);
+  await Genre.update(name, edits);
   res.status(204).end();
 });
 
-router.delete('/:name', (req, res) => {
+router.delete('/:name', async (req, res) => {
   const { name } = req.params;
-  Genre.delete(name);
+  await Genre.delete(name);
   res.status(204).end();
 });
 

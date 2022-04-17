@@ -14,22 +14,22 @@ router.get('/:name', async (req, res)=> {
   res.send(users[0]).status(200);
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   const {name, password} = req.body;
-  User.create(name, password);
+  await User.create(name, password);
   res.status(201).end();
 });
 
-router.patch('/:name', (req, res) => {
+router.patch('/:name', async (req, res) => {
   const { name } = req.params;
   const edits = req.body;
-  User.update(name, edits);
+  await User.update(name, edits);
   res.status(204).end();
 });
 
-router.delete('/:name', (req, res) => {
+router.delete('/:name', async (req, res) => {
   const { name } = req.params;
-  User.delete(name);
+  await User.delete(name);
   res.status(204).end();
 });
 
