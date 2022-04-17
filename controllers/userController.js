@@ -15,8 +15,8 @@ router.get('/:name', async (req, res)=> {
 });
 
 router.post('/', (req, res) => {
-  const {username, password} = req.body;
-  User.create(username, password);
+  const {name, password} = req.body;
+  User.create(name, password);
   res.status(201).end();
 });
 
