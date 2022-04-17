@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/Jaymontojo/readdit-backend/compare/v1.4.0...v1.5.0) (2022-04-17)
+
+
+### Features
+
+* add create subreaddits route ([fbabf47](https://github.com/Jaymontojo/readdit-backend/commit/fbabf47a9359d00e80a24b689e904d6fa0813ce8))
+* add delete subreaddits route ([653a1a9](https://github.com/Jaymontojo/readdit-backend/commit/653a1a9ca46eaaae3b26a59e163996bdf4c78b5c))
+* add findOne subreaddits route ([1c74597](https://github.com/Jaymontojo/readdit-backend/commit/1c74597ed61227fa38f8abe7d2183b15ed85ed37))
+* add get many subreaddits route ([bca6dba](https://github.com/Jaymontojo/readdit-backend/commit/bca6dba18fb7ee226689b2368ce999d1bcffa012))
+* add patch subreaddits route ([dc98412](https://github.com/Jaymontojo/readdit-backend/commit/dc9841283f5adf99679fb33a3810469e54d8c074))
+
 ## [1.4.0](https://github.com/Jaymontojo/readdit-backend/compare/v1.3.0...v1.4.0) (2022-04-17)
 
 
