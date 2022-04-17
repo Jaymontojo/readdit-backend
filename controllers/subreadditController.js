@@ -24,8 +24,11 @@ router.post('/', (req, res) => {
   //should check if that genre ID exists in the database?
 });
 
-router.patch('/:name', (req, res) => {
-  //WIP
+router.patch('/r/:name', async (req, res) => {
+  const { name } = req.params;
+  const edits = req.body;
+  await Subreaddit.update(name, edits);
+  res.status(204).end();
 });
 
 router.delete('/:name', (req, res) => {
