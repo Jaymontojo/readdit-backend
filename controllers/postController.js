@@ -26,8 +26,10 @@ router.patch('/:id', async (req, res) => {
   res.status(204).end();
 });
 
-router.delete('/:name', async (req, res) => {
-  //WIP
+router.delete('/:id', async (req, res) => {
+  const { id } = req.params;
+  await Post.delete(id);
+  res.status(204).end();
 });
 
 module.exports = router;

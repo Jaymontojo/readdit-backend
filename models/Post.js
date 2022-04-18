@@ -52,8 +52,16 @@ class Post {
     };
   };
 
-  async delete(name) {
-    //WIP
+  async delete(id) {
+    try {
+      await this.db('posts')
+        .where('id',id)
+        .del()
+        .timeout(1500);
+        return 'Successfully Deleted!';
+    } catch(err) {
+      return err;
+    };
   };
 };
 
