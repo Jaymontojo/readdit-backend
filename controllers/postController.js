@@ -19,8 +19,11 @@ router.post('/', async (req, res) => {
   res.status(201).end();
 });
 
-router.patch('/:name', async (req, res) => {
-  //WIP
+router.patch('/:id', async (req, res) => {
+  const { id } = req.params;
+  const edits = req.body;
+  await Post.update(id, edits);
+  res.status(204).end();
 });
 
 router.delete('/:name', async (req, res) => {

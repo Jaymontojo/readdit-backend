@@ -40,8 +40,16 @@ class Post {
     };
   };
 
-  async update(name, edits) {
-    //WIP
+  async update(id, edits) {
+    try {
+      await this.db('posts')
+        .where("id", id)
+        .update(edits)
+        .timeout(1500);
+      return 'Successfully Updated!'
+    } catch(err) {
+      return err;
+    };
   };
 
   async delete(name) {
