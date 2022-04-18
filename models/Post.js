@@ -14,7 +14,14 @@ class Post {
   };
 
   async findOne(id) {
-
+    try {
+      return await this.db('posts')
+        .select('*')
+        .where('id', id)
+        .timeout(1500);
+    } catch(err) {
+      return err;
+    };
   };
 
   async create(title, contents, user_id, subreaddit_id) {

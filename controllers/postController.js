@@ -8,7 +8,9 @@ router.get('/', async (req, res)=> {
 });
 
 router.get('/:id', async (req, res)=> {
-
+  const { id } = req.params;
+  const posts = await Post.findOne(id);
+  res.send(posts[0]).status(200);
 });
 
 router.post('/', async (req, res) => {
