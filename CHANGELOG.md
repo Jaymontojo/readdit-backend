@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/Jaymontojo/readdit-backend/compare/v1.5.0...v1.6.0) (2022-04-18)
+
+
+### Features
+
+* add create posts route ([711e691](https://github.com/Jaymontojo/readdit-backend/commit/711e691684dc79a676dd0f3df7627bb84a03edb3))
+* add delete posts route ([2e99f05](https://github.com/Jaymontojo/readdit-backend/commit/2e99f05bf38ed809dbcfb293d9a5b4a712aeb84f))
+* add find one posts route ([f108cf5](https://github.com/Jaymontojo/readdit-backend/commit/f108cf53a841bdafc07260e3219c502c649f629c))
+* add findmany posts route ([68ac821](https://github.com/Jaymontojo/readdit-backend/commit/68ac82119f4d9686c6ca5648c11ff394e5c315d8))
+* add update posts route ([e92e510](https://github.com/Jaymontojo/readdit-backend/commit/e92e5109da8eedf69169d266847782e3f2aa10db))
+
+
+### Bug Fixes
+
+* clarify asynchronus functions ([4f2f3ea](https://github.com/Jaymontojo/readdit-backend/commit/4f2f3ea9b76e5b5473b8802c4d3a95a62b1d20db))
+
 ## [1.5.0](https://github.com/Jaymontojo/readdit-backend/compare/v1.4.0...v1.5.0) (2022-04-17)
 
 
