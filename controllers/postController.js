@@ -4,16 +4,17 @@ const Post = require('../models/Post');
 
 router.get('/', async (req, res)=> {
   const posts = await Post.findMany();
-  res.send(posts)
-    .status(200);
+  res.send(posts).status(200);
 });
 
-router.get('/:name', async (req, res)=> {
-  //WIP
+router.get('/:id', async (req, res)=> {
+
 });
 
 router.post('/', async (req, res) => {
-  //WIP
+  const { title, contents, user_id, subreaddit_id } = req.body;
+  await Post.create(title, contents, user_id, subreaddit_id);
+  res.status(201).end();
 });
 
 router.patch('/:name', async (req, res) => {
